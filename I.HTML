@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca CEP</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="frame">
+        <div id="buscaCEP">
+            <h2>Busca CEP</h2>
+            <div class="input-group">
+                <label for="cep">CEP:</label>
+                <input onblur="consultaCep() "type="text" name="cep" id="cep" placeholder="Digite seu CEP"  required />
+                <button type="button" class="btnBuscaCep" onclick="consultaCep()">Buscar CEP</button>
+            </div>
+            <ul>
+                <li class="input-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" name="bairro" placeholder="Bairro" id="bairro" readonly />
+                </li>
+                <li class="input-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" placeholder="Cidade" id="cidade" readonly />
+                </li>
+                <li class="input-group">
+                    <label for="ddd">DDD:</label>
+                    <input type="text" name="ddd" placeholder="DDD" id="ddd" readonly />
+                </li>
+                <li class="input-group">
+                    <label for="rua">Rua:</label>
+                    <input type="text" name="rua" placeholder="Rua" id="rua" readonly />
+                </li>
+                <li class="input-group">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" name="complemento" placeholder="Complemento" id="complemento" required />
+                </li>
+                
+            </ul>
+            <div class="btn-container">
+                <button type="button" class="btnSalvar">Salvar</button><br>
+            </div>
+            <div>
+            <h3>Endereços Salvos:</h3></div>
+            <div id="enderecosSalvos"></div>
+            <div class="btn-container">
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
